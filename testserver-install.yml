@@ -1,7 +1,7 @@
 ---
 #Ansible file to provision test and dev server
 - hosts: testserver
-  become_user: jenkins
+  become_user: root
   tasks:
   - name: Install Git
     apt: name=git state=present update_cache=yes
