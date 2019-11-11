@@ -1,0 +1,14 @@
+---
+- hosts: testserver
+  become_user: root
+  tasks:
+  - name: Install Git
+    apt: name=git state=present update_cache=yes
+  - name: Install Python
+    apt: name=python state=present update_cache=yes
+  - name: Install JDK
+    apt: name=openjdk-8-jdk state=present update_cache=yes
+  - name: Install Chromium Browser
+    apt: name=chromium-browser state=present update_cache=yes
+  - name: Install ChromeDriver 
+    apt: name=chromium-chromedriver state=present update_cache=yes
